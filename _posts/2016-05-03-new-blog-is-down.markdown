@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "新的博客终于完工啦~"
-date:   2016-05-03 21:50:32
+date:   2016-05-02 21:50:32
 categories: other
 ---
 

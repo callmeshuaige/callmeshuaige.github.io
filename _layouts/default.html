@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+
+  {% include head.html %}
+
+  <body>
+  <div class=" uk-grid" style="min-height:100%;">
+    <div class="o-leftbar uk-hidden-small">
+      <ul class="o-menu"><!--可通过设置项设置hover背景色-->
+        <li class="o-logo"><a href="#">云</a></li><!--可以设置背景色和文字-->
+        <li data-uk-tooltip title="导航菜单"><a href="#o-nav" data-uk-offcanvas><i class="uk-icon-th"></i></a></li><!--呼出offcanvas作为主导航菜单-->
+        <li data-uk-tooltip="{pos:'right'}" title="搜索"><a href="#o-search" data-uk-offcanvas><i class="uk-icon-search"></i></a></li><!--搜索-->
+
+        <!--&lt;!&ndash;作为外链或页面专题链接,必须使用图标，最多8个&ndash;&gt;-->
+        <!--<li data-uk-tooltip="{pos:'right'}" title="我的CSDN"><a href="#"><i class="uk-icon-weibo"></i></a></li>-->
+        <!--<li data-uk-tooltip="{pos:'right'}" title="我的分享"><a href="#"><i class="uk-icon-cloud"></i></a></li>-->
+        <!--<li data-uk-tooltip="{pos:'right'}" title="魔方怎么玩"><a href="#"><i class="uk-icon-cube"></i></a></li>-->
+        <!--End 作为外链或页面专题链接-->
+      </ul>
+      <ul class="o-login"><!--登入登出按钮-->
+        <li data-uk-tooltip="{pos:'right'}" title="登入"><a href="#"><i class="uk-icon-sign-in"></i></a></li>
+      </ul>
+    </div>
+    <div class="o-left uk-width-3-10 uk-hidden-small">
+      <div class="o-leftwarp">
+        <iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&color=%23FFFFFF&icon=1&num=3"></iframe>
+        <br/>
+        <h1>UI Bear</h1>
+        <h3>Learn To Think</h3>
+      </div>
+    </div>
+
+
+    <div class="o-right uk-width-medium-7-10 ">
+      <div class="o-container uk-width-medium-4-5">
+
+        <nav class="o-medium-bar uk-navbar uk-visible-small">
+          <a class="o-toggle uk-navbar-brand" href="#o-nav" data-uk-offcanvas><i class="uk-icon-bars"></i></a>
+          <div class="uk-navbar-flip">
+            <div class="uk-navbar-content">
+              <form class="o-hidden-small uk-search" data-uk-search>
+                <input class="uk-search-field" type="search" placeholder="点此搜索">
+              </form>
+            </div>
+          </div>
+
+          <div class="uk-navbar-content uk-navbar-center uk-navbar-brand">UI Bear</div>
+        </nav>
+        <hr class="uk-visible-small" />
+        <div class="o-main">
+
+          {{ content }}
+
+          <ul class="uk-pagination">
+            <li class="uk-pagination-previous uk-disabled"><span><i class="uk-icon-angle-double-left"></i> 上一页</span></li>
+            <li class="uk-pagination-next"><a href="#">下一页 <i class="uk-icon-angle-double-right"></i></a></li>
+          </ul>
+          <hr class="uk-article-divider">
+        </div>
+        {% include footer.html %}
+      </div>
+    </div>
+  </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,127 @@
+html,body {
+    height: 100%;
+    
+}
+html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+}
+.o-leftbar {
+    width: 45px; 
+    height: 100%; 
+    text-align: center;
+    position: fixed; z-index: 999;
+    left: 0; 
+    background: #eee; 
+    padding: 0;
+    overflow: hidden;
+    background: #222;
+}
+.o-leftbar ul {
+    padding: 0;
+}
+.o-leftbar ul li {
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.25rem;
+}
+.o-leftbar a {
+    display: block;
+    text-decoration: none;
+    color: #999;
+}
+.o-menu {}
+.o-menu a {
+}
+.o-menu a:hover { 
+    color: #fff;
+    background: #ff999b;
+}
+.o-logo a{ 
+    color: #fff;
+    background: #ff888b;
+}
+.o-login{
+    position: absolute;
+    bottom: 0;
+}
+.o-login li{ width: 45px;}
+.o-login li a:hover {color: #fff;}
+
+.o-left {
+    background-image: url(images/pattern.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    height: 100%;
+}
+.o-leftwarp {
+    position: absolute;
+    bottom: 0;
+    margin-left:45px;
+    padding: 1rem 1.25rem 5rem 1.25rem;
+}
+.o-leftwarp h1,
+.o-leftwarp h3,
+.o-leftwarp p {
+    font-family: "微软雅黑";
+    color: #fff;
+}
+@media (min-width:768px) {
+.o-right {
+    margin-left: 30%;
+}
+}
+.o-container {
+    max-width:1000px; 
+    /*width:80%;*/
+}
+@media (max-width: 768px) {
+.o-container {
+    padding:0 1rem;
+}
+}
+@media (min-width: 768px) {
+ .o-container {
+     padding-top: 2rem;
+}
+}
+.o-medium-bar {
+    background:#fff; 
+    margin-top:1rem;
+}
+@media (max-width: 480px) {
+.o-hidden-small {
+    display: none;
+}
+}
+.o-toggle:link,
+.o-toggle:hover,
+.o-toggle:active {
+    background:pink; /*与“雲”背景同，可自定义*/
+    display: block;
+    color:#fff;
+}
+.o-main p {
+    text-align: justify;
+    -moz-text-align-last: justify;
+    -webkit-text-align-last: justify; 
+}
+.o-meta {}
+.o-meta a{
+    color: #999;
+}
+.o-meta a:hover {
+    color: #555;
+    text-decoration: none;
+}
+.o-meta .o-icon {
+    margin-left: 10px;
+    margin-right: 4px;
+}
+
+.uk-nav-offcanvas>li>a {
+    border-top: 1px solid rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+}

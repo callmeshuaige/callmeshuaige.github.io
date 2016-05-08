@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "BestCoder Round #79 (div.2) 1002 Claris and XOR"
-date:   2016-05-07 21:50:32
+date:   2016-04-10 17:30:32
 categories: other
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>

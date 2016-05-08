@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Codeforces  Educational Codeforces Round 7 - F. The Sum of the k-th Powers"
-date:   2016-05-07 21:51:32
+date:   2016-02-17 12:18:32
 categories: other
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>

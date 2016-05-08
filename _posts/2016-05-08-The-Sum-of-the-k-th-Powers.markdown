@@ -5,9 +5,8 @@ date:   2016-05-07 21:51:32
 categories: other
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
->###题意很简明就是求 $S_d(n) = \sum_{i=1}^{n}i^k$, 我们可以证明$S_d(n)$是关于 n 的 k+1 次的多项式，[具体证明参考这里](http://wenku.baidu.com/link?url=2QPccmUgeYDDfZ3l5lrGJLyrgBjrBSdFnRlI-o87A7GcZE6x0f-XNStMF2P-QeJL8mMYjC3nxM9iKwt_zVKRW1GAJM1rANxoDw48EAZwyxq)
-
->###那么我们知道根据拉格朗日插值法,x 互不相同的 n+1 个点可以确定次数不超过 n 的多项式，那么这里我们需要 k+2 个点来确定这个 k+1 次的多项式，然后直接带入 n 的值即可求出 $S_d(n)$
+<h3>题意很简明就是求 \\(S_d(n) = \sum_{i=1}^{n}i^k\\), 我们可以证明\\(S_d(n)\\)是关于 n 的 k+1 次的多项式，[具体证明参考这里](http://wenku.baidu.com/link?url=2QPccmUgeYDDfZ3l5lrGJLyrgBjrBSdFnRlI-o87A7GcZE6x0f-XNStMF2P-QeJL8mMYjC3nxM9iKwt_zVKRW1GAJM1rANxoDw48EAZwyxq)
+那么我们知道根据拉格朗日插值法,x 互不相同的 n+1 个点可以确定次数不超过 n 的多项式，那么这里我们需要 k+2 个点来确定这个 k+1 次的多项式，然后直接带入 n 的值即可求出 \\(S_d(n)\\)</h3>
 
 ```c++
 #include <iostream>

@@ -6,7 +6,7 @@ categories: other
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<h3>题意很简洁，给出两个区间[a,b],[c,d]且a,b,c,d均不超过\\(10^{18}\\)
+<h3>题意很简洁，给出两个区间[a,b],[c,d]且a,b,c,d均不超过\(10^{18}\)
 一般求最大异或值得解法就是贪心，从高位往低位贪即可，字典树也是这个原理，只不过上者需要O(n)的预处理，这题关键还是要知道若到了某一位两个数0,1均能取，那么后面肯定全为1。这样只要扫一遍就可以了。</h3>
 
 {% highlight c++ %}

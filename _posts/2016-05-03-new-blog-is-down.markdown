@@ -4,8 +4,9 @@ title:  "新的博客终于完工啦~"
 date:   2016-05-02 21:50:32
 categories: other
 ---
-
->贴个sunday算法的模板
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+贴个sunday算法的模板
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 {% highlight c++ %}
 int sunday(string s, string d)
 {

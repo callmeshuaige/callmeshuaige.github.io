@@ -3,6 +3,10 @@ var $window = $(window), gardenCtx, gardenCanvas, $garden, garden;
 var clientWidth = $(window).width();
 var clientHeight = $(window).height();
 
+$(document).on('click', '#ds-thread textarea[name=message]', function(){
+    $('#ds-sync-checkbox').prop('checked', false);
+});
+
 $(function () {
     // setup garden
 	$loveHeart = $("#loveHeart");

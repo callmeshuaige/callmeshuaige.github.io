@@ -17,7 +17,7 @@ categories: other
 除非你想嵌入的网址X-Frame-Options申明在JSP活meta里，这样网上查下还是有方法绕过的。
 </h3>
 
-{% highlight c# %}
+{% highlight java %}
 protected void Page_Load(object sender, EventArgs e)
 {
 	string url = "https://www.jiguang.cn/accounts/login/form";

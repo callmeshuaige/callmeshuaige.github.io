@@ -14,7 +14,7 @@ categories: other
 </ul>
 说明极光推送的网页不允许嵌入其他网址的Iframe中，这个特性是防止别人盗用你的网址，误导其他用户。<br/>
 确实想访问方法就是Response.Redirect申明_blank，打开新窗口显示，不过这样也就违背了Iframe的初衷。<br/>
-除非你想嵌入的网址X-Frame-Options申明在JSP活meta里，这样网上查下还是有方法绕过的。
+除非你想嵌入的网址X-Frame-Options申明在JSP或meta里，这样网上查下还是有方法绕过的。
 </h3>
 
 {% highlight java %}

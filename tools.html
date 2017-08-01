@@ -2,17 +2,40 @@
 layout: next
 ---
 <div class="home">
+    Time
     <div class="inputBox">
-        ServerTime:<input type="text" id="inputbox">
-        OrdinaryTime<input type="text" id="outputbox">
+        <input type="text" id="inputbox">
+        <input type="text" id="outputboxa">
+        or
+        <input type="text" id="outputboxb">
         <button type="button" onclick="Cgdate()">Change</button>
+    </div>
+    <br/>
+    String
+    <br/>
+    <div class="translate">
+        <input type="text" id="translateInput">
+        <input type="text" id="translateOuputLower">
+        or
+        <input type="text" id="translateOuputHigher">
+        <button type="button" onclick="Plain()">Plain</button>
     </div>
 
     <script type="text/javascript">
         function Cgdate(){
             var dateInput = document.getElementById("inputbox").value;
             var date = new Date(parseInt(dateInput) * 1000);
-            document.getElementById("outputbox").value = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"."+date.getMilliseconds();
+            document.getElementById("outputboxa").value = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"."+date.getMilliseconds();
+            dateInput = document.getElementById("inputbox").value;
+            date = new Date(parseInt(dateInput));
+            document.getElementById("outputboxb").value = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"."+date.getMilliseconds();
+        }
+        function Plain() {
+            var wordInput = document.getElementById("translateInput").value;
+            var translateOuputLower = wordInput.toLowerCase();
+            var translateOuputHigher = wordInput.toUpperCase();
+            document.getElementById("translateOuputLower").value = translateOuputLower
+            document.getElementById("translateOuputHigher").value = translateOuputHigher
         }
     </script>
 

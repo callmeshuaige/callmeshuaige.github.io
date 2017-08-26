@@ -4,21 +4,7 @@ layout: next
 <div class="home">
 	Online Edit
 	<br/>
-	<div class="edit">
-	<iframe frameborder="0" scrolling="no" id="external-frame" onload="setIframeHeight(this)"src="https://c.runoob.com/compile/66"></iframe>
+	<div class="edit" style="width:1000px;height:1000px">
+	<iframe frameborder="0" scrolling="no" width=1000px height=1000px src="https://c.runoob.com/compile/66"></iframe>
 	</div>
-	<script type="text/javascript">
-		function setIframeHeight(iframe) {
-			if (iframe) {
-				var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-				if (iframeWin.document.body) {
-				iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-				}
-			}
-		};
-
-		window.onload = function () {
-			setIframeHeight(document.getElementById('external-frame'));
-		};
-	</script>
 </div>

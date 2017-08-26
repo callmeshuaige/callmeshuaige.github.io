@@ -40,9 +40,15 @@ layout: next
 	<br/>
 
     <script type="text/javascript">
+		function isInteger(x) {
+			return (typeof x == 'number') && (x % 1 == 0);
+		}
         function Cgdate(){
             var dateInput = document.getElementById("inputbox").value;
-            var date = new Date(parseInt(dateInput) * 1000);
+            if(isInteger(dateInput) === false){
+				return alert("求求你了输个整数吧。。")
+			}
+			var date = new Date(parseInt(dateInput) * 1000);
             document.getElementById("outputboxa").value = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"."+date.getMilliseconds();
             dateInput = document.getElementById("inputbox").value;
             date = new Date(parseInt(dateInput));

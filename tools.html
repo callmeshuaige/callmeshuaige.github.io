@@ -45,7 +45,7 @@ layout: next
 		}
         function Cgdate(){
             var dateInput = document.getElementById("inputbox").value;
-            if(isInteger(dateInput) == false){
+            if(isInteger(parseInt(dateInput)) == false){
 				return alert("求求你了输个整数吧。。")
 			}
 			var date = new Date(parseInt(dateInput) * 1000);

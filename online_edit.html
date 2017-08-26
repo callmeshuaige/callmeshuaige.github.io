@@ -1,10 +1,24 @@
 ---
 layout: next
 ---
-<div class="home" style="width:2000px;height:2000px">
+<div class="home">
 	Online Edit
 	<br/>
 	<div class="edit">
-	<iframe width=2000px height=200px frameborder=0 scrolling=auto src="https://c.runoob.com/compile/66"></iframe>
+	<iframe frameborder="0" scrolling="no" id="external-frame" onload="setIframeHeight(this)"src="https://c.runoob.com/compile/66"></iframe>
 	</div>
+	<script type="text/javascript">
+		function setIframeHeight(iframe) {
+			if (iframe) {
+				var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+				if (iframeWin.document.body) {
+				iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+				}
+			}
+		};
+
+		window.onload = function () {
+			setIframeHeight(document.getElementById('external-frame'));
+		};
+	</script>
 </div>

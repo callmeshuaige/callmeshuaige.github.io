@@ -14,7 +14,7 @@ layout: next
     UnixToTime
     <div>
     <input style="width:180px; height:25px" class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly>
-    <input type="text" id="dateOutput">>
+    <input style="width:180px; height:25px" type="text" id="dateOutput">
     <button type="button" onclick="UnixToTime()">UnixToTime</button>
     </div>
     <br/>
@@ -71,10 +71,11 @@ layout: next
         function UnixToTime(){
             var dateInfo = document.getElementById("dateinfo").value;
             var Year, Month, Day, Hour, Min, Sec
+            alert(dateInfo);
             for(i = 0;i < dateInfo.length; i++){
                 var cr = dateInfo.charAt(i);
                 if(cr == '年'){
-                    alert();
+                    alert(Year);
                     break;
                 }
                 Year = Year + cr;

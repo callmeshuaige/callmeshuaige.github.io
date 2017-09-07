@@ -11,6 +11,8 @@ layout: next
         <button type="button" onclick="Cgdate()">Change</button>
     </div>
     <br/>
+    <p class="datep"><input class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly></p>
+    <br/>
     String
     <br/>
     <div class="translate">
@@ -38,7 +40,7 @@ layout: next
 		<a href="http://tool.oschina.net/codeformat/json">Format Tool</a>
 	</div>
 	<br/>
-
+    <script type="text/javascript" src="jeDate/jedate.js"></script>
     <script type="text/javascript">
 		function isInteger(x) {
 			return (typeof x == 'number') && (x % 1 == 0);

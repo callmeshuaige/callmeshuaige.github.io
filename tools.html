@@ -14,6 +14,8 @@ layout: next
     UnixToTime
     <div>
     <p class="datep"><input style="width:180px; height:25px" class="datainp" id="dateinfo" type="text" placeholder="请选择"  readonly></p>
+    <input type="text" id="dateOutput">>
+    <button type="button" onclick="UnixToTime()">UnixToTime</button>
     </div>
     <br/>
     String
@@ -65,6 +67,18 @@ layout: next
             var translateOuputHigher = wordInput.toUpperCase();
             document.getElementById("translateOuputLower").value = translateOuputLower
             document.getElementById("translateOuputHigher").value = translateOuputHigher
+        }
+        function UnixToTime(){
+            var dateInfo = document.getElementById("dateinfo").value;
+            var Year, Month, Day, Hour, Min, Sec
+            for(i = 0;i < dateInfo.length; i++){
+                var cr = dateInfo.charAt(i);
+                if(cr == '年'){
+                    alert();
+                    break;
+                }
+                Year = Year + cr;
+            }
         }
     </script>
 

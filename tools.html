@@ -70,16 +70,55 @@ layout: next
         }
         function UnixToTime(){
             var dateInfo = document.getElementById("dateinfo").value;
-            var Year, Month, Day, Hour, Min, Sec
-            alert(dateInfo);
-            for(i = 0;i < dateInfo.length; i++){
+            var Year , Month, Day, Hour, Min, Sec;
+            Year = ""; Month = ""; Day = ""; Hour = ""; Min = ""; Sec = "";
+            var pos = 0;
+            for(i = 0; i < dateInfo.length; i++){
                 var cr = dateInfo.charAt(i);
                 if(cr == '年'){
-                    alert(Year);
+                    pos = i + 1;
                     break;
                 }
                 Year = Year + cr;
             }
+            for(i = pos; i < dateInfo.length; i++){
+                var cr = dateInfo.charAt(i);
+                if(cr == '月'){
+                    pos = i + 1;
+                    break;
+                }
+                Month = Month + cr;
+            }
+            for(i = pos; i < dateInfo.length; i++){
+                var cr = dateInfo.charAt(i);
+                if(cr == '日'){
+                    pos = i + 2;
+                    break;
+                }
+                Day = Day + cr;
+            }
+            for(i = pos; i < dateInfo.length; i++){
+                var cr = dateInfo.charAt(i);
+                if(cr == ':'){
+                    pos = i + 1;
+                    break;
+                }
+                Hour = Hour + cr;
+            }
+            for(i = pos; i < dateInfo.length; i++){
+                var cr = dateInfo.charAt(i);
+                if(cr == ':'){
+                    pos = i + 1;
+                    break;
+                }
+                Min = Min + cr;
+            }
+            for(i = pos; i < dateInfo.length; i++){
+                var cr = dateInfo.charAt(i);
+                Sec = Sec + cr;
+            }
+            var commonTime = new Date(Date.UTC(parseInt(Year), parseInt(Month) - 1, parseInt(Day), parseInt(Hour), parseInt(Min), parseInt(Sec))) * 1000;
+            document.getElementById("dateOutput").value = commonTime
         }
     </script>
 

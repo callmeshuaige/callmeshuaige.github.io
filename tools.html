@@ -117,7 +117,13 @@ layout: next
                 var cr = dateInfo.charAt(i);
                 Sec = Sec + cr;
             }
-            var commonTime = new Date(Date.UTC(parseInt(Year), parseInt(Month) - 1, parseInt(Day), parseInt(Hour), parseInt(Min), parseInt(Sec))) * 1000;
+            alert(Year)
+            alert(Month)
+            alert(Day)
+            alert(Hour)
+            alert(Min)
+            alert(Sec)
+            var commonTime = new Date(Date.UTC(parseInt(Year), parseInt(Month) - 1, parseInt(Day), parseInt(Hour), parseInt(Min), parseInt(Sec)));
             document.getElementById("dateOutput").value = commonTime
         }
     </script>

@@ -28,6 +28,17 @@ layout: next
         <button type="button" onclick="Plain()">Plain</button>
     </div>
 	<br/>
+    GridPos
+    <br/>
+    <div class="gridkey">
+        坐标<input type="text" id="gridkeyInput">
+        左上<input type="text" id="gridkeyLeftUp">
+        右上<input type="text" id="gridkeyRightUp">
+        左下<input type="text" id="gridkeyLeftDown">
+        右下<input type="text" id="gridkeyRightDown">
+        <button type="button" onclick="StartGrid()">Start</button>
+    </div>
+    <br/>
 	Online Edit
 	<br/>
 	<div class="edit" style="width:1000px;height:600px">
@@ -61,6 +72,17 @@ layout: next
             var translateOuputHigher = wordInput.toUpperCase();
             document.getElementById("translateOuputLower").value = translateOuputLower
             document.getElementById("translateOuputHigher").value = translateOuputHigher
+        }
+        function StartGrid() {
+            var posInput = parseInt(document.getElementById("gridkeyInput").value);
+            var x = Math.floor(posInput / 10000);
+            var y = posInput % 10000;
+            var gridX = Math.floor(x / 10) * 10;
+            var gridY = Math.floor(y / 20) * 20;
+            document.getElementById("gridkeyLeftUp").value = Math.max(0, gridX - 10) * 10000 + Math.max(0, gridY - 20);
+            document.getElementById("gridkeyRightUp").value = Math.min(1500, gridX + 20) * 10000 + Math.max(0, gridY - 20);;
+            document.getElementById("gridkeyLeftDown").value = Math.max(0, gridX - 10) * 10000 + Math.min(1500, gridY + 40);
+            document.getElementById("gridkeyRightDown").value = Math.min(0, gridX + 20) * 10000 + Math.min(1500, gridY + 40);
         }
         function UnixToTime(){
             var dateInfo = document.getElementById("dateinfo").value;

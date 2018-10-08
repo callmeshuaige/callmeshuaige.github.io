@@ -34,11 +34,11 @@ layout: next
         坐标<input type="text" id="gridkeyInput">
         <button type="button" onclick="StartGrid()">Start</button>
         <br/>
-        左上<input type="text" id="gridkeyLeftUp" width=50px>
-        右上<input type="text" id="gridkeyRightUp" width=50px>
+        左上<input type="text" id="gridkeyLeftUp" width="50px">
+        右上<input type="text" id="gridkeyRightUp" width="50px">
         <br/>
-        左下<input type="text" id="gridkeyLeftDown" width=50px>
-        右下<input type="text" id="gridkeyRightDown" width=50px>
+        左下<input type="text" id="gridkeyLeftDown" width="50px">
+        右下<input type="text" id="gridkeyRightDown" width="50px">
     </div>
     <br/>
 	Online Edit
@@ -84,7 +84,7 @@ layout: next
             document.getElementById("gridkeyLeftUp").value = Math.max(0, gridX - 10) * 10000 + Math.max(0, gridY - 20);
             document.getElementById("gridkeyRightUp").value = Math.min(1500, gridX + 20) * 10000 + Math.max(0, gridY - 20);;
             document.getElementById("gridkeyLeftDown").value = Math.max(0, gridX - 10) * 10000 + Math.min(1500, gridY + 40);
-            document.getElementById("gridkeyRightDown").value = Math.min(0, gridX + 20) * 10000 + Math.min(1500, gridY + 40);
+            document.getElementById("gridkeyRightDown").value = Math.max(0, gridX + 20) * 10000 + Math.min(1500, gridY + 40);
         }
         function UnixToTime(){
             var dateInfo = document.getElementById("dateinfo").value;
